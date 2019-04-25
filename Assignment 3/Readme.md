@@ -2,6 +2,8 @@ This Project is based on Prediction of Interest Rates of Loans from the Lending 
 
 CLAAT Document Link: https://codelabs-preview.appspot.com/?file_id=1ErRda7PtN-s_zZw0T1NItm6HUIrQ__xGyxq2B2zSR2E#0
 
+Youtube Link: https://youtu.be/baWrdEwOm9M
+
 Steps to Regenerate the Project:
 
 Clone the Project into any directory of your choice
