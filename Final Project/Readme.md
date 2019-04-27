@@ -11,4 +11,4 @@ Steps to Regenerate the Project:
 2. User Vader Sentiment Analysis Notebook to tag the sentiments and build the model respectively
 3. Reproduce the Luigi Project Notebook to get a recommendation platform
 4. Regenerate the finalemoticonanalysis to perform analysis on comment/review emojis
-5. Use the API folder to generate the Web-App
+5. Use the (API) twitter-sentiment folder to generate the Web-App
