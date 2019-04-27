@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Music Platform Recommendation</title>
+		<meta name="description" content="Tab Styles Inspiration: A small collection of styles for tabs" />
+		<meta name="keywords" content="tabs, inspiration, web design, css, modern, effects, svg" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="static/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="static/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="static/css/tabs.css" />
+		<link rel="stylesheet" type="text/css" href="static/css/tabstyles.css" />
+  		<script src="static/js/modernizr.custom.js"></script>
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+		  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		  
+	</head>
+	<body>
+		<svg class="hidden">
+			<defs>
+				<path id="tabshape" d="M80,60C34,53.5,64.417,0,0,0v60H80z"/>
+			</defs>
+		</svg>
+		<div class="container">
+			<!-- Top Navigation -->
+			<section>
+				<div class="tabs tabs-style-tzoid">
+					<nav>
+						<ul>
+							<li><a href="#section-tzoid-1" class="icon icon-home"><span>Home</span></a></li>
+							<li><a href="#section-tzoid-2" class="icon icon-box">Sentiment Report</a></li>
+							<li><a href="#section-tzoid-3" class="icon icon-box"><span>Recommendation</span></a></li>
+							<li><a href="#section-tzoid-4" class="icon icon-display"><span>Analytics</span></a></li>
+						</ul>
+					</nav>
+					<div class="content-wrap">
+						<section id="section-tzoid-1"> 
+								<div class="row">
+										<img src="" id="commentType"/>
+								</div>
+							<textarea type="text" name="text" cols="50" rows="5" class="form-control" size="50" id="text" placeholder="Text" required></textarea>
+							<br/><br/> <button type="button" id="get-senti" class="btn btn-danger">Submit</button></section>
+							<section id="section-tzoid-2"> <div class="row">
+
+									<div class="col-sm-3 form-group">
+									  <input class="form-control" id="email" name="email" placeholder="Gmail" type="email" required>
+									</div>
+									<div class="col-sm-3 form-group">
+									  <input class="form-control" id="pwd" name="pwd" placeholder="Password" type="password" required>
+									</div>
+								  <div class="col-sm-2 form-group">
+								
+								  <input class="form-control" id="tag" name="tag" placeholder="Tag" type="text" required></textarea><br>
+								  </div>
+								  <div class="col-sm-2 form-group">
+									  <input class="form-control" id="sentlist" name="sentlist" placeholder="Sent to seperate by ," type="text" required>
+									</div>
+									<div class="col-sm-2 form-group">
+											<input class="form-control" id="pageCount" name="pageCount" placeholder="Page Count" type="number" min="1" max="10" required>
+									</div>
+								  </div>
+								
+								  <div class="row">
+									  <div class="col-sm-6 form-group">
+										<button class="btn btn-default pull-right" id="sentiment-btn" type="submit">Submit</button>
+									  </div>
+									</div>
+								</section>
+								<section id="section-tzoid-3"> 
+									<div class="row">
+											<img src="" id="musicPlatform"/>
+
+
+									</div>
+									<div class="row">
+											<div class="col-sm-3 form-group">
+												<label for="cost">Cost:</label>
+													<select id="cost" class="form-control">
+														<option value="NoPref">No Preference</option>
+														<option value="Low">Low</option>
+														<option value="High">High</option>
+
+													</select>
+											</div>
+											<div class="col-sm-3 form-group">
+													<label for="recommendation">Recommendation:</label>
+														<select id="recommendation" class="form-control">
+															<option value="NoPref">No Preference</option>
+															<option value="Low">Low</option>
+															<option value="High">High</option>
+	
+														</select>
+												</div>
+												<div class="col-sm-3 form-group">
+														<label for="stability">Stability:</label>
+															<select id="stability" class="form-control">
+																<option value="NoPref">No Preference</option>
+																<option value="Low">Low</option>
+																<option value="High">High</option>
+		
+															</select>
+													</div>
+											<div class="col-sm-3 form-group">
+													<label for="ads">Ads:</label>
+														<select id="ads" class="form-control">
+															<option value="NoPref">No Preference</option>
+															<option value="Low">Low</option>
+															<option value="High">High</option>
+	
+														</select>
+												</div>
+
+
+								</div>
+								<div class="row">
+										<div class="col-sm-6 form-group">
+										  <button class="btn btn-default pull-right" id="recommend-btn" type="submit">Submit</button>
+										</div>
+									  </div>
+							</section>
+							<section id="section-tzoid-4"> 
+									<script type='text/javascript' src='https://us-east-1.online.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1280px; height: 750px;'><object class='tableauViz' width='1280' height='750' style='display:none;'><param name='host_url' value='https%3A%2F%2Fus-east-1.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;megatron' /><param name='name' value='ComparitiveAnalysisVisualization&#47;Dashboard2' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /><param name='filter' value='iframeSizedToWindow=true' /></object></div>
+									<img src="static/img/Dashboard 1.png"/>
+									<img src="static/img/Dashboard 2.png"/>
+
+								</section>
+					</div><!-- /content -->
+				</div><!-- /tabs -->
+				<p>Technique from <a href="http://vintageproductions.eu/grid/interactivity/">Slanted tabs with CSS 3D transforms</a> by Lea Verou</p>
+			</section>
+				</div><!-- /container -->
+		<script src="static/js/cbpFWTabs.js"></script>
+		<script>
+			(function() {
+
+				[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+					new CBPFWTabs( el );
+				});
+
+			})();
+		</script>
+			<script>
+					$(document).ready(function() {
+					  $(document).on("click","#get-senti",function(){
+						var text=$("#text").val();
+						if (text.trim()) {
+						// is empty or whitespace
+					   var response="";
+					   var qurl="/predict-sentiment";
+					   $.ajax({
+								type: "POST",
+								cache: false,
+								data:{'text':text},
+								url: qurl,
+								dataType: "json",
+								success: function(response) { 
+								var mood=response.Prediction;  
+								if (mood=='Neutral')
+								{
+									$('#commentType').attr('src', 'static/img/neutral.png');
+								}
+								else if(mood=='Negative')
+								{
+									$('#commentType').attr('src', 'static/img/Negative.png');
+								}
+								else
+								{
+									$('#commentType').attr('src', 'static/img/BePositive.jpeg');
+								}
+								},
+								error: function(jqXHR) {
+									alert("error: " + jqXHR.status);
+								}
+							})
+					}
+					else{
+					alert("Text is empty")
+					}
+					});
+					
+					$(document).on("click","#sentiment-btn",function(){
+    var email=$("#email").val();
+
+    var pwd=$("#pwd").val();
+
+    var sentlist=$("#sentlist").val();
+
+    var tag=$("#tag").val();
+	var pageCount=$("#pageCount").val();				
+    if (email.trim() && pwd.trim() && sentlist.trim() && tag.trim() && pageCount) {
+    // is empty or whitespace
+   var response="";
+   var qurl="/report-sent";
+   $.ajax({
+            type: "POST",
+            cache: false,
+            data:{'tag':tag,'email':email,'pwd':pwd,'sentlist':sentlist,'pageCount':pageCount},
+            url: qurl,
+            dataType: "json",
+            success: function(response) { 
+            var mood=response.Result;  
+			alert(mood);
+            },
+            error: function(jqXHR) {
+                alert("error: " + jqXHR.status);
+            }
+        })
+}
+else{
+alert("Some fieldis/are empty");
+}
+});
+
+
+$(document).on("click","#recommend-btn",function(){
+    var cost=$("#cost").val();
+
+    var stability=$("#stability").val();
+
+    var recommendation=$("#recommendation").val();
+
+    var ads=$("#ads").val();
+
+    if (cost.trim() && stability.trim() && recommendation.trim() && ads.trim()) {
+    // is empty or whitespace
+   var response="";
+   var qurl="/recommend-sent";
+   $.ajax({
+            type: "POST",
+            cache: false,
+            data:{'ads':ads,'cost':cost,'stability':stability,'recommendation':recommendation},
+            url: qurl,
+            dataType: "json",
+            success: function(response) { 
+            var mood=response.Result;  
+			if(mood=="Spotify")
+			{
+			$('#musicPlatform').attr('src', 'static/img/Spotify.jpg');
+			}
+			else if(mood=="Pandora")
+			{
+				$('#musicPlatform').attr('src', 'static/img/Pandora.jpg');
+
+			}
+			else if(mood=="Apple Music")
+			{
+				$('#musicPlatform').attr('src', 'static/img/Apple-Music.jpg');
+
+			}
+			else if(mood=="Amazon Music")
+			{
+				$('#musicPlatform').attr('src', 'static/img/Amazon-Music.jpg');
+
+			}            },
+            error: function(jqXHR) {
+                alert("error: " + jqXHR.status);
+            }
+        })
+}
+else{
+alert("Some fieldis/are empty");
+}
+});
+
+					});
+					</script>
+	</body>
+</html>

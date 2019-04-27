@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Tab Styles Inspiration</title>
+		<meta name="description" content="Tab Styles Inspiration: A small collection of styles for tabs" />
+		<meta name="keywords" content="tabs, inspiration, web design, css, modern, effects, svg" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="static/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="static/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="static/css/tabs.css" />
+		<link rel="stylesheet" type="text/css" href="static/css/tabstyles.css" />
+  		<script src="static/js/modernizr.custom.js"></script>
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+		  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		  
+	</head>
+	<body>
+		<svg class="hidden">
+			<defs>
+				<path id="tabshape" d="M80,60C34,53.5,64.417,0,0,0v60H80z"/>
+			</defs>
+		</svg>
+		<div class="container">
+			<!-- Top Navigation -->
+			<section>
+				<div class="tabs tabs-style-tzoid">
+					<nav>
+						<ul>
+							<li><a href="/" class="icon icon-home"><span>Home</span></a></li>
+							<li><a href="sentiment-report" class="icon icon-box"><span>Sentiment Report</span></a></li>
+							<li><a href="recommendation" class="icon icon-box"><span>Recommendation</span></a></li>
+							<li><a href="analysis" class="icon icon-display"><span>Analytics</span></a></li>
+						</ul>
+					</nav>
+					<div class="content-wrap">
+						<section id="section-tzoid-1"> <div class="row">
+
+                <div class="col-sm-3 form-group">
+                  <input class="form-control" id="email" name="email" placeholder="Gmail" type="email" required>
+                </div>
+                <div class="col-sm-3 form-group">
+                  <input class="form-control" id="pwd" name="pwd" placeholder="Password" type="text" required>
+                </div>
+              <div class="col-sm-3 form-group">
+            
+              <input class="form-control" id="tag" name="tag" placeholder="Tag" type="text" required></textarea><br>
+              </div>
+              <div class="col-sm-3 form-group">
+                  <input class="form-control" id="sentlist" name="sentlist" placeholder="Sent to seperate by ," type="text" required>
+                </div>
+              </div>
+            
+              <div class="row">
+                  <div class="col-sm-6 form-group">
+                    <button class="btn btn-default pull-right" id="sentiment-btn" type="submit">Submit</button>
+                  </div>
+                </div>
+            </section>
+					
+					</div><!-- /content -->
+				</div><!-- /tabs -->
+				<p>Technique from <a href="http://vintageproductions.eu/grid/interactivity/">Slanted tabs with CSS 3D transforms</a> by Lea Verou</p>
+			</section>
+				</div><!-- /container -->
+		<script src="static/js/cbpFWTabs.js"></script>
+		<script>
+			(function() {
+
+				[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+					new CBPFWTabs( el );
+				});
+
+			})();
+		</script>
+
+<script>
+
+
+$(document).ready(function() {
+  $(document).on("click","#sentiment-btn",function(){
+    var email=$("#email").val();
+
+    var pwd=$("#pwd").val();
+
+    var sentlist=$("#sentlist").val();
+
+    var tag=$("#tag").val();
+
+    if (email.trim() && pwd.trim() && sentlist.trim() && tag.trim()) {
+    // is empty or whitespace
+   var response="";
+   var qurl="/report-sent";
+   $.ajax({
+            type: "POST",
+            cache: false,
+            data:{'tag':tag,'email':email,'pwd':pwd,'sentlist':sentlist},
+            url: qurl,
+            dataType: "json",
+            success: function(response) { 
+            var mood=response.Result;  
+            alert("Report Sent");
+            },
+            error: function(jqXHR) {
+                alert("error: " + jqXHR.status);
+            }
+        })
+}
+else{
+alert("Some fieldis/are empty");
+}
+});});
+</script>
+
+</body>
+</html>
